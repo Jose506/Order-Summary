@@ -1,0 +1,136 @@
+:root{
+    
+/*Primary*/
+--paleBlue: hsl(225, 100%, 94%);
+--brightBlue: hsl(245, 75%, 52%);
+
+/*Neutral*/
+
+--veryPaleBlue: hsl(225, 100%, 98%);
+--desaturatedBlue: hsl(224, 23%, 55%);
+--Darkblue: hsl(223, 47%, 23%);
+--font: 'Red Hat Display', sans-serif;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    box-sizing: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-orderSummary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+    text-align: center;
+    border-radius: 1rem;
+    background: var(--paleBlue);
+    box-shadow: 0px 8px 41px 5px rgba(0,0,0,0.3);
+}
+
+.card-orderSummary__img img{
+    border-radius: 1rem 1rem 0 0;
+    max-width: 100%;
+}
+
+.card-orderSummary__desc{
+    margin: 3rem;
+}
+
+.card-orderSummary__desc p {
+    padding: 1.5rem;
+    color: var(--desaturatedBlue);
+}
+
+.card-orderSummary__plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1.5rem 3rem 1.5rem;
+}
+
+.card-orderSummary__plan .plan-price {
+    width: 100%;
+    text-align: left;
+    margin-left: 1.5rem;
+}
+
+.plan-price span {
+    color: var(--desaturatedBlue);
+}
+
+.card-orderSummary__plan  a {
+    font: var(--font);
+    font-weight: 700;
+    color: var(--brightBlue);
+}
+
+.card-orderSummary__plan a:hover {
+    color: var(--desaturatedBlue);
+    text-decoration: none;
+}
+
+.btn-payment {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    border-style: none;
+    background-color: var(--brightBlue);
+    color: var(--paleBlue);
+    font-weight: 900;
+    padding: 1rem;
+    border-radius: .8rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 8px 20px 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.btn-payment:hover {
+    background: var(--desaturatedBlue);
+}
+
+.btn-cancel {
+    font-family: var(--font);
+    border-style: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--desaturatedBlue);
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-cancel:hover {
+    color: var(--Darkblue);
+}
+
+@media (max-width: 375px) {
+    .card-orderSummary__desc  {
+        margin: 1.5rem;
+    }
+
+    .card-orderSummary {
+        margin: 0 1rem;
+    }
+
+    .card-orderSummary__desc p {
+        padding: 1rem;
+    }
+    .card-orderSummary__plan {
+        margin: 0 1rem 3rem 1rem;
+    }
+}
